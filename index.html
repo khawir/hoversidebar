@@ -16,8 +16,8 @@
     <link rel="stylesheet" href="/css/tailwind.css">
 </head>
 <body class="font-nato-sans sm:bg-gray-50 text-gray-700">
-    <section class="header-mob px-6 py-4 border-b lg:hidden">
-
+    
+    <section class="header-mob bg-white px-6 py-4 border-b fixed w-full top-0 left-0 lg:hidden">
         <div class="mob-top flex justify-between">
             <div class="flex">
                 <button class="mr-4 focus:text-red-200"><i class="fa-solid fa-bars"></i></button>
@@ -35,16 +35,115 @@
                 21 Apr 2024, Sunday
             </p>
         </div>
+        
+    </section>
+    
 
-        <div class="mob-menu fixed -left-1/2 top-0 bg-gray-50 w-1/2 overflow-y-auto h-screen transition-transform">
-            <!-- translate-x-full -->
+    <div class="mob-menu fixed -left-1/2 top-0 bg-white w-1/2 overflow-y-auto h-screen transition-transform">
+        <!-- translate-x-full -->
+        <div class="flex flex-col justify-between h-full">
+            <ul class="mob-nav-top block">
+                <li class="mob-logo">
+                    <p class="px-8 py-4 border-b">
+                        <img src="img/PulsseLogo.svg" alt="" class="h-10">
+                    </p>
+                </li>
+                <li>
+                    <a href="" class="block px-8 py-3 hover:bg-gray-200">
+                        <i class="fa-solid fa-house text-2xl mr-3"></i>Home
+                    </a>
+                </li>
+                <li>
+                    <p class="px-8 py-3">
+                        <i class="fa-solid fa-user text-2xl mr-3"></i> Profile
+                    </p>
+                </li>
+                <li>
+                    <a href="" class="block px-8 py-3 hover:bg-gray-200">
+                        <i class="fa-solid fa-code-branch mx-3"></i>Manage Sites
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="block px-8 py-3 hover:bg-gray-200">
+                        <i class="fa-solid fa-user-tie mx-3"></i>Manage Hosts
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="block px-8 py-3 hover:bg-gray-200">
+                        <i class="fa-solid fa-user-clock mx-3"></i>Manage Guests
+                    </a>
+                </li>
+                <li>
+                    <p class="px-8 py-3">
+                        <i class="fa-solid fa-sitemap text-2xl mr-3"></i> Sites
+                    </p>
+                </li>
+                <li>
+                    <a href="" class="block px-8 py-3 hover:bg-gray-200">
+                        <i class="fa-solid fa-video mx-3"></i>CSE Dept
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="block px-8 py-3 hover:bg-gray-200">
+                        <i class="fa-solid fa-video mx-3"></i>IS Dept
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="block px-8 py-3 hover:bg-gray-200">
+                        <i class="fa-solid fa-video mx-3"></i>EE Dept
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="mob-nav-btm border-t">
+                <li>
+                    <a href="" class="block px-8 py-3 hover:bg-gray-200">
+                        <i class="fa-regular fa-envelope text-2xl mr-3"></i>Contact
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="block px-8 py-3 hover:bg-gray-200">
+                        <i class="fa-solid fa-gear text-2xl mr-3"></i>Settings
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="block px-8 py-3 hover:bg-gray-200">
+                        <i class="fa-solid fa-arrow-right-from-bracket text-2xl mr-3"></i>Logout
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </div>    
+
+
+    <header class="hidden lg:flex justify-between bg-white px-4 py-2 border-b fixed w-full top-0 left-0">
+        <div class="flex">
+            <img src="img/PulsseLogo.svg" alt="" class="site-logo pl-2 pr-5 h-14 my-auto border-r">
+            <div class="greet px-6 py-2">
+                <p class="crumb text-sm">Branches > <span class="text-violet-600">Jeddah branch Analytics</span></p>
+                <p class="text-lg font-semibold">Hi, Layla</p>
+            </div>
+        </div>
+        <div class="flex">
+            <div class="search bg-gray-200 m-2 pl-4 rounded-lg">
+                <span><i class="fa-solid fa-magnifying-glass text-gray-500"></i></span>
+                <input type="text" class="bg-gray-200 text-lg p-2 rounded-lg placeholder:text-gray-500" placeholder="Search">
+            </div>
+            <div class="righto flex">
+                <p><i class="fa-regular fa-bell text-3xl text-gray-500 m-4"></i></p>
+                <img src="img/Avatar.svg" alt="" class="m-2 h-12">
+            </div>
+        </div>
+    </header>
+
+    
+
+    <div class="bsw lg:flex-auto">
+
+        <nav class="hidden lg:block fixed top-0 left-0 -z-10 pt-24 bg-white border-r overflow-y-auto overflow-x-hidden h-screen">
             <div class="flex flex-col justify-between h-full">
-                <ul class="mob-nav-top block">
-                    <li class="mob-logo">
-                        <p class="px-8 py-4 border-b">
-                            <img src="img/PulsseLogo.svg" alt="" class="h-10">
-                        </p>
-                    </li>
+                <ul class="nav-top block">
                     <li>
                         <a href="" class="block px-8 py-3 hover:bg-gray-200">
                             <i class="fa-solid fa-house text-2xl mr-3"></i>Home
@@ -91,8 +190,7 @@
                         </a>
                     </li>
                 </ul>
-
-                <ul class="mob-nav-btm border-t">
+                <ul class="nav-btm border-t">
                     <li>
                         <a href="" class="block px-8 py-3 hover:bg-gray-200">
                             <i class="fa-regular fa-envelope text-2xl mr-3"></i>Contact
@@ -109,212 +207,181 @@
                         </a>
                     </li>
                 </ul>
-
             </div>
-        </div>    
+        </nav>
 
-    </section>
+        <section class="dashboard mt-32 lg:mt-24 lg:ml-56">
+            
+            <h1 class="text-2xl font-bold text-violet-600 mx-8">Dashboard</h1>
 
-    <header class="hidden px-4 py-2 border-b lg:flex justify-between">
-        <div class="flex">
-            <img src="img/PulsseLogo.svg" alt="" class="site-logo pl-2 pr-5 h-14 my-auto border-r">
-            <div class="greet px-6 py-2">
-                <p class="crumb text-sm">Branches > <span class="text-violet-600">Jeddah branch Analytics</span></p>
-                <p class="text-lg font-semibold">Hi, Layla</p>
-            </div>
-        </div>
-        <div class="flex">
-            <div class="search bg-gray-200 m-2 pl-4 rounded-lg">
-                <span><i class="fa-solid fa-magnifying-glass text-gray-500"></i></span>
-                <input type="text" class="bg-gray-200 text-lg p-2 rounded-lg placeholder:text-gray-500" placeholder="Search">
-            </div>
-            <div class="righto flex">
-                <p><i class="fa-regular fa-bell text-3xl text-gray-500 m-4"></i></p>
-                <img src="img/Avatar.svg" alt="" class="m-2 h-12">
-            </div>
-        </div>
-    </header>
-
-    <section class="dashboard">
-        
-        <article class="board">
-            <div class="bg-white border shadow-md rounded-md mx-6 my-4 px-6 py-3">
-                <h2 class="text-violet-500 font-bold mb-2">Footfall</h2>
-                <div class="bg-gray-100 h-54 lg:h-72">
-                    <div class="p-24"></div>
-                </div>
-            </div>
-        </article>
-
-        <div class="lg:flex lg:w- bg-red-100">
-
-            <article class="board hidden lg:block">
+            <article class="board">
                 <div class="bg-white border shadow-md rounded-md mx-6 my-4 px-6 py-3">
-                    <h2 class="text-violet-500 font-bold mb-2">Feed</h2>
-                    <div class="bg-gray-100 h-54 lg:h-[32rem] lg:w-auto">
-                        <div class="p-24"></div>
+                    <h2 class="text-violet-500 font-bold mb-2">Footfall</h2>
+                    <div class="bg-gray-100 h-56 lg:h-80">
                     </div>
                 </div>
             </article>
 
-            <div class="lg:-ml-5">
-                <article class="board">
-                    <div class="bg-white border shadow-md rounded-md mx-6 my-4 px-6 py-3">
-                        <h2 class="text-violet-500 font-bold mb-2">Gender Ratio</h2>
-                        <div class="bg-gray-100 h-54">
-                            <div class="p-24"></div>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="board">
-                    <div class="bg-white border shadow-md rounded-md mx-6 my-4 px-6 py-3">
-                        <h2 class="text-violet-500 font-bold mb-4">Customers Today</h2>
-                        <div class="flex justify-between my-4">
-                            <p><i class="fa-solid fa-arrow-right-to-bracket mr-4 text-violet-700"></i>Entered</p>
-                            <p class="font-bold">265</p>
-                        </div>
-                        <div class="flex justify-between my-4">
-                            <p><i class="fa-solid fa-arrow-right-from-bracket mr-4 text-violet-700"></i>Left</p>
-                            <p class="font-bold">155</p>
-                        </div>
-                        <div class="flex justify-between my-4">
-                            <p><i class="fa-solid fa-store mr-4 text-violet-700"></i>In-Store</p>
-                            <p class="font-bold">45</p>
-                        </div>
-                        <div class="flex justify-between my-4">
-                            <p><i class="fa-solid fa-user-plus mr-4 text-violet-700"></i>New</p>
-                            <p class="font-bold">96</p>
-                        </div>
-                        <div class="flex justify-between my-4">
-                            <p><i class="fa-solid fa-rotate-left mr-4 text-violet-700"></i>Returning</p>
-                            <p class="font-bold">20</p>
-                        </div>
-                        <div class="flex justify-between my-4">
-                            <p><i class="fa-solid fa-users mr-4 text-violet-700"></i>Groups</p>
-                            <p class="font-bold">78</p>
-                        </div>
-                    </div>
-                </article>
-            </div>
-
-        </div>
-
-        <article class="board">
-            <div class="bg-white border shadow-md rounded-md mx-6 my-4 px-6 py-3">
-                <h2 class="text-violet-500 font-bold mb-2">Repeat Ratio</h2>
-                <div class="bg-gray-100 h-54">
-                    <div class="p-24"></div>
-                </div>
-            </div>
-        </article>
-
-        <article class="board">
-            <div class="bg-white border shadow-md rounded-md mx-6 my-4 px-6 py-3">
-                <h2 class="text-violet-500 font-bold mb-2">Group Trend</h2>
-                <div class="bg-gray-100 h-54">
-                    <div class="p-24"></div>
-                </div>
-            </div>
-        </article>
-
-        <article class="board">
-            <div class="bg-white border shadow-md rounded-md mx-6 my-4 px-6 py-3">
-                <h2 class="text-violet-500 font-bold mb-2">Engagement</h2>
-                <div class="bg-gray-100 h-54">
-                    <div class="p-24"></div>
-                </div>
-            </div>
-        </article>
-        
-        <article class="board">
-            <div class="bg-white border shadow-md rounded-md mx-6 my-4 px-6 py-3">
-                <h2 class="text-violet-500 font-bold mb-2">Gender Timeline</h2>
-                <div class="bg-gray-100 h-54">
-                    <div class="p-24"></div>
-                </div>
-            </div>
-        </article>
-
-        <article class="board">
-            <div class="bg-white border shadow-md rounded-md mx-6 my-4 py-3">
-                <div class="">
-                    <div class="flex mb-2 px-2">
-                        <span class="text-gray-400 mt-1"><i class="fa-solid fa-magnifying-glass"></i></span>
-                        <input type="" name="" id="" class="w-full ml-2 text-gray-900 placeholder:text-gray-400" placeholder="Search">
-                    </div>
-                    <div class="overflow-x-auto">
-                        <table class="w-full text-sm">
-                            <thead>
-                                <tr class="bg-slate-100">
-                                    <th class="px-8 py-1 border">Visit Date</th>
-                                    <th class="px-8 py-1 border">Time-in</th>
-                                    <th class="px-8 py-1 border">Time-out</th>
-                                    <th class="px-8 py-1 border">Gender</th>
-                                    <th class="px-8 py-1 border">Group</th>
-                                    <th class="px-8 py-1 border">New</th>
-                                </tr>
-                            </thead>
-                            <tbody class="text-center">
-                                <tr class="odd:bg-white even:bg-slate-50 border-b">
-                                    <td class="px-2 py-1 border">21-04-2024</td>
-                                    <td class="px-2 py-1 border">08:05 am</td>
-                                    <td class="px-2 py-1 border">08:20 am</td>
-                                    <td class="px-2 py-1 border">M</td>
-                                    <td class="px-2 py-1 border">N</td>
-                                    <td class="px-2 py-1 border">N</td>
-                                </tr>
-                                <tr class="odd:bg-white even:bg-slate-50 border-b">
-                                    <td class="px-2 py-1 border">21-04-2024</td>
-                                    <td class="px-2 py-1 border">08:15 am</td>
-                                    <td class="px-2 py-1 border">09:00 am</td>
-                                    <td class="px-2 py-1 border">M</td>
-                                    <td class="px-2 py-1 border">N</td>
-                                    <td class="px-2 py-1 border">Y</td>
-                                </tr>
-                                <tr class="odd:bg-white even:bg-slate-50 border-b">
-                                    <td class="px-2 py-1 border">21-04-2024</td>
-                                    <td class="px-2 py-1 border">08:45 am</td>
-                                    <td class="px-2 py-1 border">09:00 am</td>
-                                    <td class="px-2 py-1 border">F</td>
-                                    <td class="px-2 py-1 border">Y</td>
-                                    <td class="px-2 py-1 border">N</td>
-                                </tr>
-                                <tr class="odd:bg-white even:bg-slate-50 border-b">
-                                    <td class="px-2 py-1 border">21-04-2024</td>
-                                    <td class="px-2 py-1 border">09:15 am</td>
-                                    <td class="px-2 py-1 border">09:30 am</td>
-                                    <td class="px-2 py-1 border">F</td>
-                                    <td class="px-2 py-1 border">Y</td>
-                                    <td class="px-2 py-1 border">N</td> 
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="py-2 text-gray-400 text-sm flex justify-between mx-2">
-                        <div class="pagination">
-                            <span class="">Rows per page</span>
-                            <select name="" id="" class="">
-                                <option value="">5</option>
-                                <option value="">10</option>
-                                <option value="">20</option>
-                            </select>
-                        </div>
-                        <div class="navigation">
-                            <button class="text-violet-500"><i class="fa-solid fa-chevron-left"></i> Prev</button>
-                            <button>1</button>
-                            <button class="text-violet-500">2</button>
-                            <button>3</button>
-                            <button>4</button>
-                            <button>5</button>
-                            <button>Next <i class="fa-solid fa-chevron-right"></i></button>
-                        </div>
+            <article class="board hidden lg:block">
+                <div class="bg-white border shadow-md rounded-md mx-6 my-4 px-6 py-3">
+                    <h2 class="text-violet-500 font-bold mb-2">Feed</h2>
+                    <div class="bg-gray-100 lg:h-[32rem]">
                     </div>
                 </div>
-            </div>
-        </article>
+            </article>
 
-    </section>
+            <article class="board">
+                <div class="bg-white border shadow-md rounded-md mx-6 my-4 px-6 py-3">
+                    <h2 class="text-violet-500 font-bold mb-2">Gender Ratio</h2>
+                    <div class="bg-gray-100 h-56 lg:h-80">
+                    </div>
+                </div>
+            </article>
+
+            <article class="board">
+                <div class="bg-white border shadow-md rounded-md mx-6 my-4 px-6 py-3">
+                    <h2 class="text-violet-500 font-bold mb-4">Customers Today</h2>
+                    <div class="flex justify-between my-4">
+                        <p><i class="fa-solid fa-arrow-right-to-bracket mr-4 text-violet-700"></i>Entered</p>
+                        <p class="font-bold">265</p>
+                    </div>
+                    <div class="flex justify-between my-4">
+                        <p><i class="fa-solid fa-arrow-right-from-bracket mr-4 text-violet-700"></i>Left</p>
+                        <p class="font-bold">155</p>
+                    </div>
+                    <div class="flex justify-between my-4">
+                        <p><i class="fa-solid fa-store mr-4 text-violet-700"></i>In-Store</p>
+                        <p class="font-bold">45</p>
+                    </div>
+                    <div class="flex justify-between my-4">
+                        <p><i class="fa-solid fa-user-plus mr-4 text-violet-700"></i>New</p>
+                        <p class="font-bold">96</p>
+                    </div>
+                    <div class="flex justify-between my-4">
+                        <p><i class="fa-solid fa-rotate-left mr-4 text-violet-700"></i>Returning</p>
+                        <p class="font-bold">20</p>
+                    </div>
+                    <div class="flex justify-between my-4">
+                        <p><i class="fa-solid fa-users mr-4 text-violet-700"></i>Groups</p>
+                        <p class="font-bold">78</p>
+                    </div>
+                </div>
+            </article>
+
+
+            <article class="board">
+                <div class="bg-white border shadow-md rounded-md mx-6 my-4 px-6 py-3">
+                    <h2 class="text-violet-500 font-bold mb-2">Repeat Ratio</h2>
+                    <div class="bg-gray-100 h-56 lg:h-80">
+                    </div>
+                </div>
+            </article>
+
+            <article class="board">
+                <div class="bg-white border shadow-md rounded-md mx-6 my-4 px-6 py-3">
+                    <h2 class="text-violet-500 font-bold mb-2">Group Trend</h2>
+                    <div class="bg-gray-100 h-56 lg:h-80">
+                    </div>
+                </div>
+            </article>
+
+            <article class="board">
+                <div class="bg-white border shadow-md rounded-md mx-6 my-4 px-6 py-3">
+                    <h2 class="text-violet-500 font-bold mb-2">Engagement</h2>
+                    <div class="bg-gray-100 h-56 lg:h-80">
+                    </div>
+                </div>
+            </article>
+            
+            <article class="board">
+                <div class="bg-white border shadow-md rounded-md mx-6 my-4 px-6 py-3">
+                    <h2 class="text-violet-500 font-bold mb-2">Gender Timeline</h2>
+                    <div class="bg-gray-100 h-56 lg:h-80">
+                    </div>
+                </div>
+            </article>
+
+            <article class="board">
+                <div class="bg-white border shadow-md rounded-md mx-6 my-4 py-3">
+                    <div class="">
+                        <div class="flex mb-2 px-2">
+                            <span class="text-gray-400 mt-1"><i class="fa-solid fa-magnifying-glass"></i></span>
+                            <input type="" name="" id="" class="w-full ml-2 text-gray-900 placeholder:text-gray-400" placeholder="Search">
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-sm">
+                                <thead>
+                                    <tr class="bg-slate-100">
+                                        <th class="px-8 py-1 border">Visit Date</th>
+                                        <th class="px-8 py-1 border">Time-in</th>
+                                        <th class="px-8 py-1 border">Time-out</th>
+                                        <th class="px-8 py-1 border">Gender</th>
+                                        <th class="px-8 py-1 border">Group</th>
+                                        <th class="px-8 py-1 border">New</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-center">
+                                    <tr class="odd:bg-white even:bg-slate-50 border-b">
+                                        <td class="px-2 py-1 border">21-04-2024</td>
+                                        <td class="px-2 py-1 border">08:05 am</td>
+                                        <td class="px-2 py-1 border">08:20 am</td>
+                                        <td class="px-2 py-1 border">M</td>
+                                        <td class="px-2 py-1 border">N</td>
+                                        <td class="px-2 py-1 border">N</td>
+                                    </tr>
+                                    <tr class="odd:bg-white even:bg-slate-50 border-b">
+                                        <td class="px-2 py-1 border">21-04-2024</td>
+                                        <td class="px-2 py-1 border">08:15 am</td>
+                                        <td class="px-2 py-1 border">09:00 am</td>
+                                        <td class="px-2 py-1 border">M</td>
+                                        <td class="px-2 py-1 border">N</td>
+                                        <td class="px-2 py-1 border">Y</td>
+                                    </tr>
+                                    <tr class="odd:bg-white even:bg-slate-50 border-b">
+                                        <td class="px-2 py-1 border">21-04-2024</td>
+                                        <td class="px-2 py-1 border">08:45 am</td>
+                                        <td class="px-2 py-1 border">09:00 am</td>
+                                        <td class="px-2 py-1 border">F</td>
+                                        <td class="px-2 py-1 border">Y</td>
+                                        <td class="px-2 py-1 border">N</td>
+                                    </tr>
+                                    <tr class="odd:bg-white even:bg-slate-50 border-b">
+                                        <td class="px-2 py-1 border">21-04-2024</td>
+                                        <td class="px-2 py-1 border">09:15 am</td>
+                                        <td class="px-2 py-1 border">09:30 am</td>
+                                        <td class="px-2 py-1 border">F</td>
+                                        <td class="px-2 py-1 border">Y</td>
+                                        <td class="px-2 py-1 border">N</td> 
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="py-2 text-gray-400 text-sm flex justify-between mx-2">
+                            <div class="pagination">
+                                <span class="">Rows per page</span>
+                                <select name="" id="" class="">
+                                    <option value="">5</option>
+                                    <option value="">10</option>
+                                    <option value="">20</option>
+                                </select>
+                            </div>
+                            <div class="navigation">
+                                <button class="text-violet-500"><i class="fa-solid fa-chevron-left"></i> Prev</button>
+                                <button>1</button>
+                                <button class="text-violet-500">2</button>
+                                <button>3</button>
+                                <button>4</button>
+                                <button>5</button>
+                                <button>Next <i class="fa-solid fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
+    </div>
 
     <script src="https://kit.fontawesome.com/1de687668b.js" crossorigin="anonymous"></script>
 </body>

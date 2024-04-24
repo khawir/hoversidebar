@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="/css/tailwind.css">
+  <title>Test</title>
+</head>
+<body>
+  <div id="mySidebar" class="h-screen w-50 fixed z-10 top-0 left-0 bg-slate-900 pt-14 transition-all overflow-x-hidden whitespace-nowrap" onmouseover="toggleSidebar()" onmouseout="toggleSidebar()">
+    <li>
+      <a href="#" class="p-2 pr-8 text-xl block text-gray-400 hover:text-white">
+      <span><i class="material-icons mr-4">info</i>
+      <span class="inline-block align-middle">about</span>
+      </a>
+    </li>
+    <li>
+      <a href="#" class="p-2 pr-8 text-g text-xl block text-gray-400 hover:text-white">
+        <i class="material-icons mr-4">spa</i>
+        <span class="inline-block align-middle">services</span>
+      </a>
+    </li>
+    <li>
+      <a href="#" class="p-2 pr-8 text-g text-xl block text-gray-400 hover:text-white">
+        <i class="material-icons mr-4">monetization_on</i>
+        <span class="inline-block align-middle">clients</span>
+      </a>
+    </li>
+    <li>
+      <a href="#" class="p-2 pr-8 text-g text-xl block text-gray-400 hover:text-white">
+        <i class="material-icons mr-4">email</i>
+        <span class="inline-block align-middle">contact</span>
+      </a>
+    </li>
+  </div>
+  
+  <div id="main" class="main p-2 ml-48 transition-all duration-700">
+    <h2>A simple sidebar.</h2>
+    <p>The sidebar is in fixed position and does not close.</p>
+  </div>
+  <script>
+    var mini = true;
+
+    function toggleSidebar() {
+      if (mini) {
+        console.log("opening sidebar");
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        this.mini = false;
+      } else {
+        console.log("closing sidebar");
+        document.getElementById("mySidebar").style.width = "85px";
+        document.getElementById("main").style.marginLeft = "85px";
+        this.mini = true;
+      }
+    }
+  </script>
+</body>
+</html>
+
+
+
+
